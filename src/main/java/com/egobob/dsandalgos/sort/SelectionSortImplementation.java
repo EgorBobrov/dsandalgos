@@ -10,7 +10,7 @@ package com.egobob.dsandalgos.sort;
 public class SelectionSortImplementation extends IntArraySortingAlgorithm {
 
    @Override
-   public void sort(int[] array) {
+   public void sort(Integer[] array) {
       if (noReasonToSort(array)) return;
 
       for (int lastUnsortedIndex = array.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {

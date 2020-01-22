@@ -8,12 +8,12 @@ package com.egobob.dsandalgos.sort;
  */
 public class MergeSortImplementation extends IntArraySortingAlgorithm {
    @Override
-   public void sort(int[] array) {
+   public void sort(Integer[] array) {
       if (noReasonToSort(array)) return;
       mergeSort(array, 0, array.length);
    }
 
-   private void mergeSort(int[] array, int leftStart, int rightEnd) {
+   private void mergeSort(Integer[] array, int leftStart, int rightEnd) {
       if (rightEnd - leftStart < 2) {
          return;
       }
@@ -25,7 +25,7 @@ public class MergeSortImplementation extends IntArraySortingAlgorithm {
       merge(array, leftStart, rightStart, rightEnd);
    }
 
-   void merge(int[] array, int leftStart, int rightStart, int rightEnd) {
+   void merge(Integer[] array, int leftStart, int rightStart, int rightEnd) {
 
       // we are merging 2 sorted arrays. If the biggest element of the left array is smaller than the smallest element of the right array,
       // there is nothing to be done here: elements of both arrays are already sorted taken together.
@@ -33,7 +33,7 @@ public class MergeSortImplementation extends IntArraySortingAlgorithm {
          return;
       }
 
-      int[] tempArray = new int[rightEnd - leftStart];
+      Integer[] tempArray = new Integer[rightEnd - leftStart];
       int leftIndex = leftStart;
       int rightIndex = rightStart;
       int tempIndex = 0;

@@ -7,21 +7,20 @@ public final class TestUtil {
 
    private static final Random RANDOM = new Random();
 
-   public static int[] generateIntArray() {
+   public static Integer[] generateIntArray() {
       return generateIntArray(40);
    }
 
-   public static int[] generateIntArray(int size) {
+   public static Integer[] generateIntArray(int size) {
       return generateLimitedIntArray(-100, 100, size);
    }
 
-   public static int[] generateLimitedIntArray(int fromIncluded, int toExcluded, int size) {
+   public static Integer[] generateLimitedIntArray(int fromIncluded, int toExcluded, int size) {
       return RANDOM.ints(fromIncluded, toExcluded)
-            .limit(size)
-            .toArray();
+            .limit(size).boxed().toArray(Integer[]::new);
    }
 
-   public static int[] reverseArray(int[] array) {
+   public static Integer[] reverseArray(Integer[] array) {
       if (array.length < 2) return array;
       for (int i = 0; i < array.length / 2; i++) {
          int temp = array[i];

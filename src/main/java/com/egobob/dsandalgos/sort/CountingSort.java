@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class CountingSort extends IntArraySortingAlgorithm {
 
    @Override
-   public void sort(int[] array) {
+   public void sort(Integer[] array) {
       if (noReasonToSort(array)) return;
 
       int lowerLimit = getMinValue(array);
@@ -20,7 +20,7 @@ public class CountingSort extends IntArraySortingAlgorithm {
       sort(array, lowerLimit, upperLimit);
    }
 
-   public void sort(int[] array, int lowerLimit, int upperLimit) {
+   public void sort(Integer[] array, int lowerLimit, int upperLimit) {
       if (noReasonToSort(array)) return;
 
       int[] countingArray = new int[upperLimit - lowerLimit + 1];
@@ -38,12 +38,12 @@ public class CountingSort extends IntArraySortingAlgorithm {
       }
    }
 
-   private int getMinValue(int[] array) {
-      return Arrays.stream(array).min().getAsInt();
+   private int getMinValue(Integer[] array) {
+      return Arrays.stream(array).mapToInt(i -> i).min().getAsInt();
    }
 
-   private int getMaxValue(int[] array) {
-      return Arrays.stream(array).max().getAsInt();
+   private int getMaxValue(Integer[] array) {
+      return Arrays.stream(array).mapToInt(i -> i).max().getAsInt();
    }
 
 }

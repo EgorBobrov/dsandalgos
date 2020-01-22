@@ -12,7 +12,7 @@ package com.egobob.dsandalgos.sort;
 public class BubbleSortImplementation extends IntArraySortingAlgorithm {
 
    @Override
-   public void sort(int[] array) {
+   public void sort(Integer[] array) {
       if (noReasonToSort(array)) return;
 
       // last index of the unsorted partition - at the beginning the array is unsorted, so it's simply the last index in the array

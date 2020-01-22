@@ -11,13 +11,14 @@ package com.egobob.dsandalgos.sort;
  * is at its proper position.
  */
 public class QuickSortImplementation extends IntArraySortingAlgorithm {
+
    @Override
-   public void sort(int[] array) {
+   public void sort(Integer[] array) {
       if (noReasonToSort(array)) return;
       quickSort(array, 0, array.length);
    }
 
-   private void quickSort(int[] array, int startIndex, int endIndex) {
+   private void quickSort(Integer[] array, int startIndex, int endIndex) {
       if (endIndex - startIndex < 2) return;
 
       int pivotIndex = partition(array, startIndex, endIndex);
@@ -25,7 +26,7 @@ public class QuickSortImplementation extends IntArraySortingAlgorithm {
       quickSort(array, pivotIndex + 1, endIndex);
    }
 
-   private int partition(int[] array, int startIndex, int endIndex) {
+   private int partition(Integer[] array, int startIndex, int endIndex) {
       int pivot = array[startIndex];
 
       int leftIndex = startIndex;

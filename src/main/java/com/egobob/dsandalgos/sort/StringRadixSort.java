@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * A modification of Radix sort which sorts Strings (containing lowercase letters of Latin alphabet) instead of Integers.
  */
-public class StringRadixSort extends StringArraySortingAlogrithm{
+public class StringRadixSort extends StringArraySortingAlogrithm {
 
    @Override
    public void sort(String[] array) {

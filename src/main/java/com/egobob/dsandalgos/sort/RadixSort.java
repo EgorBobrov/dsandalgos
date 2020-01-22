@@ -12,7 +12,7 @@ package com.egobob.dsandalgos.sort;
 public class RadixSort extends IntArraySortingAlgorithm {
 
    @Override
-   public void sort(int[] array) {
+   public void sort(Integer[] array) {
       if (noReasonToSort(array)) return;
 
       int width = calculateWidth(array);
@@ -21,14 +21,14 @@ public class RadixSort extends IntArraySortingAlgorithm {
       radixSort(array, width, radix);
    }
 
-   public void radixSort(int[] array, int radix, int width) {
+   public void radixSort(Integer[] array, int radix, int width) {
       // for each position, from rightmost to leftmost, sort by this position using stable counting sort
       for (int i = 0; i < width; i++) {
          radixSingleSort(array, i, radix);
       }
    }
 
-   private void radixSingleSort(int[] array, int position, int radix) {
+   private void radixSingleSort(Integer[] array, int position, int radix) {
       int numberOfItems = array.length;
       int[] countArray = new int[radix];
 
@@ -43,7 +43,7 @@ public class RadixSort extends IntArraySortingAlgorithm {
       }
 
       // stable counting sort
-      int[] tempArray = new int[numberOfItems];
+      Integer[] tempArray = new Integer[numberOfItems];
       for(int tempIndex = numberOfItems - 1; tempIndex >= 0; tempIndex--) {
          tempArray[--countArray[getDigit(position, array[tempIndex], radix)]] = array[tempIndex];
       }
@@ -58,7 +58,7 @@ public class RadixSort extends IntArraySortingAlgorithm {
       return (value / (int) Math.pow(radix, position)) % radix;
    }
 
-   private int calculateWidth(int[] array) {
+   private int calculateWidth(Integer[] array) {
       int width = calculateIntWidth(array[0]);
       for (int i = 1; i < array.length; i++) {
          if(calculateIntWidth(array[i]) != width) {

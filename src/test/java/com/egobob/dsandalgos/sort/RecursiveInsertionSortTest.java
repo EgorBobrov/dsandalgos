@@ -10,49 +10,49 @@ public class RecursiveInsertionSortTest extends AbstractIntArraySortingTest {
 
    @Test
    public void testSort_whenArrayIsEmpty_ThenItSortsProperly() {
-      int[] arr = generateIntArray(0);
+      Integer[] arr = generateIntArray(0);
       initializeAndSortArrays(arr, insertionSort);
       performAssertions(arr);
    }
 
    @Test
    public void testSort_whenArrayIsOneElementLong_ThenItSortsProperly() {
-      int[] arr = generateIntArray(1);
+      Integer[] arr = generateIntArray(1);
       initializeAndSortArrays(arr, insertionSort);
       performAssertions(arr);
    }
 
    @Test
    public void testSort_whenArrayIsTwoElementsLongAndSorted_ThenItSortsProperly() {
-      int[] arr = {1, 2};
+      Integer[] arr = {1, 2};
       initializeAndSortArrays(arr, insertionSort);
       performAssertions(arr);
    }
 
    @Test
    public void testSort_whenArrayIsTwoElementsLong_ThenItSortsProperly() {
-      int[] arr = {2, 1};
+      Integer[] arr = {2, 1};
       initializeAndSortArrays(arr, insertionSort);
       performAssertions(arr);
    }
 
    @Test
    public void testSort_whenArrayIsThreeElementsLong_ThenItSortsProperly() {
-      int[] arr = {2, 3, 1};
+      Integer[] arr = {2, 3, 1};
       initializeAndSortArrays(arr, insertionSort);
       performAssertions(arr);
    }
 
    @Test
    public void testSort_whenArrayIsFiveElementsLong_ThenItSortsProperly() {
-      int[] arr = {15, -39, 6, 32, 58};
+      Integer[] arr = {15, -39, 6, 32, 58};
       initializeAndSortArrays(arr, insertionSort);
       performAssertions(arr);
    }
 
    @Test
    public void testSort_whenArrayIsTenElementsLong_ThenItSortsProperly() {
-      int[] arr = generateIntArray(10);
+      Integer[] arr = generateIntArray(10);
       initializeAndSortArrays(arr, insertionSort);
       performAssertions(arr);
    }
@@ -60,7 +60,7 @@ public class RecursiveInsertionSortTest extends AbstractIntArraySortingTest {
    @Test
    public void testSort_when10RandomizedArrays_ThenItSortsProperly() {
       for (int i = 0; i < 10; i++) {
-         int[] arr = generateIntArray();
+         Integer[] arr = generateIntArray();
          initializeAndSortArrays(arr, insertionSort);
          performAssertions(arr);
       }

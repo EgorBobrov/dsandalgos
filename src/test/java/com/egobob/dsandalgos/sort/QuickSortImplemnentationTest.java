@@ -11,28 +11,28 @@ public class QuickSortImplemnentationTest extends AbstractIntArraySortingTest {
 
    @Test
    public void testSort_whenArrayIsEmpty_ThenItSortsProperly() {
-      int[] arr = generateIntArray(0);
+      Integer[] arr = generateIntArray(0);
       initializeAndSortArrays(arr, quickSortImplementation);
       performAssertions(arr);
    }
 
    @Test
    public void testSort_whenArrayIsOneElementLong_ThenItSortsProperly() {
-      int[] arr = generateIntArray(1);
+      Integer[] arr = generateIntArray(1);
       initializeAndSortArrays(arr, quickSortImplementation);
       performAssertions(arr);
    }
 
    @Test
    public void testSort_whenArrayIsFourElementsLong_ThenItSortsProperly() {
-      int[] arr = {1, 3, 2, 0};
+      Integer[] arr = {1, 3, 2, 0};
       initializeAndSortArrays(arr, quickSortImplementation);
-      assertArrayEquals(new int[]{0, 1, 2, 3}, sortedByCustomImpl);
+      assertArrayEquals(new Integer[]{0, 1, 2, 3}, sortedByCustomImpl);
    }
 
    @Test
    public void testSort_whenArrayIsTenElementsLong_ThenItSortsProperly() {
-      int[] arr = generateIntArray(10);
+      Integer[] arr = generateIntArray(10);
       initializeAndSortArrays(arr, quickSortImplementation);
       performAssertions(arr);
    }
@@ -40,7 +40,7 @@ public class QuickSortImplemnentationTest extends AbstractIntArraySortingTest {
    @Test
    public void testSort_when10RandomizedArrays_ThenItSortsProperly() {
       for (int i = 0; i < 10; i++) {
-         int[] arr = generateIntArray();
+         Integer[] arr = generateIntArray();
          initializeAndSortArrays(arr, quickSortImplementation);
          performAssertions(arr);
       }

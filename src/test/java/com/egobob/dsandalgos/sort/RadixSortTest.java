@@ -10,21 +10,21 @@ public class RadixSortTest extends AbstractIntArraySortingTest {
 
    @Test
    public void testSort_whenArrayIsEmpty_ThenItSortsProperly() {
-      int[] arr = generateIntArray(0);
+      Integer[] arr = generateIntArray(0);
       initializeAndSortArrays(arr, radixSort);
       performAssertions(arr);
    }
 
    @Test
    public void testSort_whenArrayIsOneElementLong_ThenItSortsProperly() {
-      int[] arr = generateIntArray(1);
+      Integer[] arr = generateIntArray(1);
       initializeAndSortArrays(arr, radixSort);
       performAssertions(arr);
    }
 
    @Test
    public void testSort_whenArrayIsTenElementsLongWithRadix3_ThenItSortsProperly() {
-      int[] arr = generateLimitedIntArray(100, 1000, 10);
+      Integer[] arr = generateLimitedIntArray(100, 1000, 10);
       initializeAndSortArrays(arr, radixSort);
       performAssertions(arr);
    }
@@ -32,7 +32,7 @@ public class RadixSortTest extends AbstractIntArraySortingTest {
    @Test
    public void testSort_when10RandomizedArraysWithRadix3_ThenItSortsProperly() {
       for (int i = 0; i < 10; i++) {
-         int[] arr = generateLimitedIntArray(100, 1000, 10);
+         Integer[] arr = generateLimitedIntArray(100, 1000, 10);
          initializeAndSortArrays(arr, radixSort);
          performAssertions(arr);
       }

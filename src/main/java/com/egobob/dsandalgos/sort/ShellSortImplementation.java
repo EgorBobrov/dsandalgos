@@ -13,7 +13,7 @@ package com.egobob.dsandalgos.sort;
 public class ShellSortImplementation extends IntArraySortingAlgorithm {
 
    @Override
-   public void sort(int[] array) {
+   public void sort(Integer[] array) {
 
       if (noReasonToSort(array)) return;
 

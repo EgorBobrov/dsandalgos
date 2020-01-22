@@ -3,12 +3,12 @@ package com.egobob.dsandalgos.sort;
 public class RecursiveInsertionSort extends IntArraySortingAlgorithm {
 
    @Override
-   public void sort(int[] array) {
+   public void sort(Integer[] array) {
       if (noReasonToSort(array)) return;
       recursiveInsertionSort(array, 1);
    }
 
-   private void recursiveInsertionSort(int[] array, int firstUnsortedIndex) {
+   private void recursiveInsertionSort(Integer[] array, int firstUnsortedIndex) {
       if (firstUnsortedIndex >= array.length) {
          return;
       }
@@ -18,7 +18,7 @@ public class RecursiveInsertionSort extends IntArraySortingAlgorithm {
       recursiveInsertionSort(array, firstUnsortedIndex + 1);
    }
 
-   private void insert(int[] array, int valueToInsert, int firstUnsortedIndex) {
+   private void insert(Integer[] array, int valueToInsert, int firstUnsortedIndex) {
       if (firstUnsortedIndex == 0) {
          array[firstUnsortedIndex] = valueToInsert;
          return;
